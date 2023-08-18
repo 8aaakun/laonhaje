@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+#임시
 # Application definition
 
 INSTALLED_APPS = [
