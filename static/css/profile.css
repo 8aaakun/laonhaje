@@ -1,0 +1,105 @@
+body{
+    margin: 0;
+    padding: 0;
+    justify-content: flex-start;
+}
+#imagePreview {
+    max-width: 300px;
+    bottom: 200px;
+    margin-top: 150px;
+    margin-left: 250px;
+}
+
+.custom-file-upload {
+    height: 50px;
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color:#FF6A00;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    border: 1px #FF6A00;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+    margin-left: 330px;
+
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+.btn-upload {
+    width: 150px;
+    height: 50px;
+    background: #FF6A00;
+    border: 1px #FF6A00;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-upload a{
+    color:white;
+}
+#file {
+    display: none;
+}
+.name{
+    position:absolute;
+    bottom: 500px;
+    right:450px;
+}
+.password{
+    position:absolute;
+    bottom: 400px;
+    right:450px;
+}
+.submit_btn{
+    width: 200px;
+    height: 70px;
+    background: #FF6A00;
+    border: 1px #FF6A00;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    bottom:100px;
+    right: 500px;
+}
+.cancel{
+    width: 200px;
+    height: 70px;
+    background: #FF6A00;
+    border: 1px #FF6A00;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom:100px;
+    right: 250px;
+}
+.cancel a{
+    color:white;
+    font-size: 20px;
+    text-decoration-line: none;
+}
+input[type="text"]{
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-bottom: 3px solid #FF6A00; /* 밑줄 스타일 적용 */
+    border-radius: 0; /* 필요에 따라 밑줄만 적용하고, 상단은 둥글게 유지 */
+}

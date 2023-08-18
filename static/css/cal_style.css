@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#yearSelect,
+#monthSelect {
+    font-size: 18px;
+}
+
+.calendar{
+    margin-left: 100px;
+}
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calendar-day {
+    text-align: center;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+
+.weekday {
+    font-weight: bold;
+    padding: 15px;
+}
+
+.calendar-day:not(.weekday):not(.empty-day):nth-child(7n) {
+    color: blue;
+}
+
+.calendar-day:not(.weekday):not(.empty-day):nth-child(7n+1) {
+    color: red;
+}
+
+.empty-day {
+    background-color: transparent;
+    border: none;
+    cursor: default;
+}
+
+.event-list {
+    margin-top: 20px;
+}
+
+.event {
+    padding: 10px;
+    margin-left:100px;
+    background-color: rgb(243, 251, 130);
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 30px;
+}
+.event-form input[type="date"] {
+    font-size: 18px;
+    color: black;
+}
+.event-form input[type="text"] {
+    margin-left: 250px;
+    font-size: 18px;
+    color: black;
+}
+.event-form button {
+    font-size: 18px;
+    padding: 5px 20px;
+    background-color: #FF6A00;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.calendar-header button {
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: #FF6A00;
+    border: none;
+    cursor: pointer;
+}

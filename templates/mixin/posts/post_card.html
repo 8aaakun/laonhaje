@@ -1,0 +1,31 @@
+{% load static %}
+<div class="post">
+    <div class="post-header">
+      <div class="post-author">{{ post.writer }}</div>
+      <div class="post-date">{{ post.created_at }}</div>
+    </div>
+    <div class="post-images">
+      <div class="post-image">
+        <img src="{{ post.image.url }}" alt="Image 1" style="width:400px; height:400px;">
+      </div>
+      <div class="post-image">
+        <img src="post5.png" alt="Image 2">
+      </div>
+      <!-- 여러 장의 이미지 컨테이너 추가 -->
+    </div>
+    <div class="post-content">
+      <p>{{ post.content }}</p>
+    </div>
+    <div class="hashtags">
+      <div class="hashtag">#해시태그1</div>
+      <div class="hashtag">#해시태그2</div>
+      <!-- 원하는 해시태그를 추가 -->
+    </div>
+
+    <div class="interaction-buttons">
+      <button class="like-button">
+        <img src="{% static 'icons/like.png' %}" alt="Like Icon">
+      </button>
+      <button class="comment-button"><a href="{% url 'posts:comment' post.id %}">의견나누기</a></button>
+    </div>
+  </div>

@@ -1,0 +1,107 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+
+    border-bottom: 1px solid white;
+}
+
+.header-author {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.header-icons {
+    display: flex;
+    gap: 10px;
+}
+body{
+    padding:20px;
+    max-height: 100vh;
+    overflow: hidden;
+}
+.post-content-container {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    height: 280px;
+    margin-top: 30px;
+    min-width: 300px; /* 조정 가능한 최소 너비 */
+    max-width: 700px; /* 조정 가능한 최대 너비 */
+}
+
+
+.post-scroll-inner {
+    display: flex;
+    align-items: flex-start; /* 이미지와 내용을 위로 정렬 */
+}
+
+.post-image-container {
+    margin-left: 100px;
+    width: 40%;
+    margin-right: 50px;
+    display: flex;
+    overflow-x: scroll;
+    gap:10px;
+    margin-top: 30px;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+}
+.comment-container {
+    width: 1450px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.comment-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    resize: none;
+    height: 100px;
+}
+
+.comment-button {
+    background-color: #FF6A00;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 15px;
+    cursor: pointer;
+    height: 100px;
+    width:200px;
+    font-size: 30px;
+}
+.comment-list {
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 30px;
+    border-top: 1px solid white;
+}
+
+.comment-scroll-container {
+    max-height: 300px; /* 최대 높이 설정 */
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+}
+
+.comment {
+    margin-bottom: 10px;
+    padding: 40px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color:white;
+}

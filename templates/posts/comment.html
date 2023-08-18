@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>comment</title>
+    <link rel="stylesheet" href="{% static 'css/comment.css' %}">
+    <script src="https://kit.fontawesome.com/239a686ade.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="header-author">
+        {{ post.writer }}
+    </div>
+    <div class="header-icons">
+        <a href="{% url 'index' %}"><i class="fa-solid fa-house fa-3x" style="color: #FF6A00;"></i></a>
+    </div>
+  </header>
+  <div class="main-content">
+      <div class="post-scroll-container">
+          <div class="post-scroll-inner">
+              <div class="post-image-container">
+                  <img src="{{ post.image.url }}" alt="게시물 이미지" class="post-image" style="width:400px; height:400px;">
+                  <img src="post2.png" alt="게시물 이미지" class="post-image">
+                  <img src="post3.png" alt="게시물 이미지" class="post-image">
+              </div>
+              <div class="post-content-container">
+                  <div class="post-content">
+                      <p>{{ post.content }}</p>
+                      <!-- 추가 내용... -->
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="comment-container">
+          <textarea class="comment-input" placeholder="댓글 작성"></textarea>
+          <button class="comment-button">댓글 작성</button>
+      </div>
+
+      <div class="comment-list">
+          <div class="comment-scroll-container">
+              <div class="comment">
+                  <p>댓글 내용...</p>
+              </div>
+              <div class="comment">
+                  <p>댓글 내용...</p>
+              </div>
+              <div class="comment">
+                  <p>댓글 내용...</p>
+              </div>
+              <!-- 다른 댓글들을 여기에 추가 -->
+          </div>
+      </div>
+  </div>
+</body>
+</html>
