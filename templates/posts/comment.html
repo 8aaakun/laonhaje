@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>comment</title>
+    <title>라온하제|댓글</title>
     <link rel="stylesheet" href="{% static 'css/comment.css' %}">
     <script src="https://kit.fontawesome.com/239a686ade.js" crossorigin="anonymous"></script>
 </head>
@@ -22,8 +22,6 @@
           <div class="post-scroll-inner">
               <div class="post-image-container">
                   <img src="{{ post.image.url }}" alt="게시물 이미지" class="post-image" style="width:400px; height:400px;">
-                  <img src="post2.png" alt="게시물 이미지" class="post-image">
-                  <img src="post3.png" alt="게시물 이미지" class="post-image">
               </div>
               <div class="post-content-container">
                   <div class="post-content">
@@ -34,8 +32,8 @@
           </div>
       </div>
       <div class="comment-container">
-          <textarea class="comment-input" placeholder="댓글 작성"></textarea>
-          <button class="comment-button">댓글 작성</button>
+          <textarea class="comment-input" placeholder="댓글 작성" name="comment_in" id="comment_in"></textarea>
+          <button class="comment-button" type="submit">댓글 작성</button>
       </div>
 
       <div class="comment-list">

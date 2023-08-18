@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* 헤더 스타일 */
+header {
+    background-color: #FF6A00;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 1000px;
+    height: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* 이미지 선택 영역 스타일 */
+form p:nth-child(1) {
+    flex: 1;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+/* 내용 영역 스타일 */
+form p:nth-child(2) {
+    flex: 2;
+    box-sizing: border-box;
+}
+
+/* 양식 요소 스타일 */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+form input[type="file"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form input[type="submit"] {
+    background-color: #FF6A00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    align-self: flex-end; /* 제출 버튼을 오른쪽 끝에 배치 */
+    margin-bo: 10px; /* 제출 버튼 위쪽 여백 추가 */
+}
+
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+/* 내용칸 크기 고정 */
+form textarea {
+    width:900px;
+    height: 500px;
+    resize: none;
+}
+
+/* 제출버튼 우측 하단 배치 */
+form div:last-child {
+    margin-top: auto;
+    align-self: flex-end;
+}

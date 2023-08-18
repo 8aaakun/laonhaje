@@ -1,27 +1,100 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>라온하제</title>
+
+    <script src="https://kit.fontawesome.com/239a686ade.js" crossorigin="anonymous"></script>
+    <link href="profile.css" type="text/css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/pica/dist/pica.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #FF6A00;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 1600px;
+        }
+
+
+
+        .post_form_container {
+            background: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .name,
+        .password {
+            margin-bottom: 10px;
+            margin-bottom: 100px;
+            margin-right: 200px;
+            font-size:xx-large;
+        }
+
+        .name h2,
+        .password h2 {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .submit_btn {
+            background-color: #FF6A00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 18px;
+            cursor: pointer;
+            margin-bottom: 250px;
+            margin-right: 220px;
+        }
+
+        .cancel {
+            margin-bottom: 250px; /* Adjust the value as needed */
+            margin-right: 200px; /* Adjust the value as needed */
+        }
+
+        
+        
+
+    </style>
 </head>
 <body>
-    <h1>Login</h1>
-    
-    {% if error %}
-    <p style="color: red;">{{ error }}</p>
-    {% endif %}
-    
-    <form method="post">
-        {% csrf_token %}
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <button type="submit">Login</button>
-    </form>
-    
+    <header>
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'icons/logo_img.png' %}" alt="Logo"></a>
+        </div>
+    </header>
+    <div id="main_container">
+        <div class="post_form_container">
+            <form action="" class="post_form" method="POST" enctype="multipart/form-data"> <!-- 실제 처리 페이지 주소로 변경하세요 -->
+                {% csrf_token %}
+                <div class="name">
+                    <h2>아이디</h2>
+                    <input type="text" size="35" maxlength="150" name="username" id="username" required>
+                </div>
+                <div class="password">
+                    <h2>비밀번호</h2>
+                    <input type="password" size="35" maxlength="15" id="password" name="password" required>
+                </div>
+                <input class="submit_btn" type="submit">
+                <button class="cancel" type="button" height="50px"><a href="{% url 'users:signup' %}"> 회원가입</a></button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
